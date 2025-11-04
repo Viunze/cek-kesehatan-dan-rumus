@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Math Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Health & Math Hub</h1>
+        <nav>
+            <button onclick="showSection('health')">Cek Kesehatan</button>
+            <button onclick="showSection('pyramid')">Kalkulator Piramida</button>
+            <button onclick="showSection('extra')">Fitur Tambahan</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="health" class="active">
+            <h2>Cek Kesehatan (BMI Calculator)</h2>
+            <form id="bmiForm">
+                <label for="weight">Berat (kg):</label>
+                <input type="number" id="weight" required>
+                <label for="height">Tinggi (cm):</label>
+                <input type="number" id="height" required>
+                <label for="age">Usia:</label>
+                <input type="number" id="age" required>
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender">
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+                <button type="submit">Hitung BMI</button>
+            </form>
+            <div id="bmiResult"></div>
+        </section>
+        
+        <section id="pyramid">
+            <h2>Kalkulator Piramida Segiempat</h2>
+            <form id="pyramidForm">
+                <label for="side">Panjang Sisi Alas (cm):</label>
+                <input type="number" id="side" required>
+                <label for="heightP">Tinggi Piramida (cm):</label>
+                <input type="number" id="heightP" required>
+                <button type="submit">Hitung</button>
+            </form>
+            <div id="pyramidResult"></div>
+        </section>
+        
+        <section id="extra">
+            <h2>Fitur Tambahan</h2>
+            <div class="feature">
+                <h3>Tips Kesehatan Harian</h3>
+                <p id="dailyTip"></p>
+                <button onclick="generateTip()">Dapatkan Tip Baru</button>
+            </div>
+            <div class="feature">
+                <h3>Konversi Suhu</h3>
+                <label for="celsius">Celsius:</label>
+                <input type="number" id="celsius">
+                <button onclick="convertTemp()">Konversi ke Fahrenheit</button>
+                <p id="tempResult"></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Health & Math Hub. Dibuat dengan ❤️</p>
+        <div class="social">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
